@@ -8,6 +8,7 @@ namespace DynamicStateManager
 
         public Application()
         {
+            // initiliase the state stack
             states = new StateStack(new State.Context(10));
             RegisterStates();
 
@@ -25,6 +26,7 @@ namespace DynamicStateManager
 
         public void Run()
         {
+            // run whilst there are any states in the stateStack
             while (states.stateStack.Count > 0)
             {
                 Draw();
@@ -34,11 +36,13 @@ namespace DynamicStateManager
 
         private void Update()
         {
+            // update all the states
             states.Update();
         }
 
         private void Draw()
         {
+            // draw out the states
             states.Draw();
         }
     }
