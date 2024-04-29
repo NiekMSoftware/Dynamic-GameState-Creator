@@ -24,15 +24,15 @@ namespace DynamicStateManager
             states.RegisterState<MenuState>(State.ID.MAIN_MENU);
         }
 
-        public void Run()
-        {
-            // run whilst there are any states in the stateStack
-            while (states.stateStack.Count > 0)
+        public void Run()        
             {
-                Draw();
-                Update();
+                // run whilst there are any states in the stateStack
+                while (states.stateStack.Count > 0)
+                {
+                    Draw();
+                    Update();
+                }
             }
-        }
 
         private void Update()
         {

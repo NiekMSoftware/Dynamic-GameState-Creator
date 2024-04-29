@@ -21,8 +21,8 @@
         // Structure to represent pending changes to the state stack.
         private struct PendingChange
         {
-            public Action Action;
-            public State.ID StateId;
+            public readonly Action Action;
+            public readonly State.ID StateId;
 
             public PendingChange(Action _action, State.ID _stateId)
             {
